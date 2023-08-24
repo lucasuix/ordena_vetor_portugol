@@ -7,8 +7,10 @@ programa {
 
     inteiro j, n = y.numero_elementos(vetor)
 
+    //Caso o vetor não seja sorteado, e sim embaralhado,
+    //Esse para cuida de fazer essas permutações
     para (inteiro i = 0; i < n; i++) {
-      j = y.sorteia(0,5)
+      j = y.sorteia(0,99)
 
       temp = vetor[i]
       vetor[i] = vetor[j]
@@ -17,7 +19,7 @@ programa {
 
     escreva(vetor, "\n")
 
-    inteiro menor, lil_pos, iteracoes = (n+(n*n))/2 //S� PRA CONTAR QUANTAS VEZES O LOOP � RODADO
+    inteiro menor, lil_pos, iteracoes = (n+(n*n))/2 //SÓ PRA CONTAR QUANTAS VEZES O LOOP É RODADO
 
     /*
     S = (a0 + an)*n/2
@@ -27,7 +29,7 @@ programa {
     */
 
     para (inteiro i = 0; i < n; i++) {
-      menor = vetor[n-1] //(RE)INICIA A VARI�VEL MENOR
+      menor = vetor[n-1] //(RE)INICIA A VARIÁVEL MENOR
 
       para (inteiro j = i; j < n; j++) {
 
